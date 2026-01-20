@@ -34,7 +34,7 @@ def play_game_3(n_lives=10):
             letter = input("Enter a letter (a-z)\n> ")
     
         letters_guessed.append(letter.lower())
-        result = process_guess(letter, board, word)
+        result, board = process_guess(letter, board, word)
         if result == False:
             n_remaining += -1
 
