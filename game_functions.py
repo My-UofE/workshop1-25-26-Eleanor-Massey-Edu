@@ -2,11 +2,15 @@ import random
 
 # function to be used by game_1: Guess the Number
 def pick_value(poss_values):          #it seems like the test wants the pick_value function to always pick the middle of the possible values left
-    middle_indices = [len(poss_values//2)]
+    middle_indices = [len(poss_values)//2]
     if len(poss_values) % 2 == 0:
-        middle_indices.append(len(poss_values+1//2))
-    x = random.choice(middle_indices)   
+        middle_indices.append((len(poss_values)//2)-1)
+    random_index = random.choice(middle_indices)
+    x = poss_values[random_index]   
+    print(x)
     return x
+
+pick_value([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
 
 # function to be used in game_2: Higher or Lower
 def check_higher_lower(current_val, next_val, user_input):
