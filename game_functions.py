@@ -4,7 +4,7 @@ import random
 def pick_value(poss_values):          #it seems like the test wants the pick_value function to always pick the middle of the possible values left
     middle_indices = [len(poss_values)//2]
     if len(poss_values) % 2 == 0:
-        middle_indices.append((len(poss_values)//2)-1)
+        middle_indices.append((len(poss_values)+1//2))
     random_index = random.choice(middle_indices)
     x = poss_values[random_index]   
     print(x)
